@@ -1,6 +1,6 @@
 
- public void startAlert() {  
-       // for Alarm 25/12/2012 at 12.00   
+ public void startAlert() {
+       // for Alarm 25/12/2012 at 12.00
 Calendar myAlarmDate = Calendar.getInstance();
 myAlarmDate.setTimeInMillis(System.currentTimeMillis());
 myAlarmDate.set(2012, 11, 25, 12, 00, 0);
@@ -10,7 +10,6 @@ myAlarmDate.set(2012, 11, 25, 12, 00, 0);
         calendar.set(Calendar.MINUTE, Minute);
         calendar.set(Calendar.SECOND, 0);
 
- //define Repeating Alarm Start After Each 2 Minutes
  
 
   AlarmManager am = (AlarmManager)context.getSystemService  (Context.ALARM_SERVICE);
@@ -22,14 +21,14 @@ myAlarmDate.set(2012, 11, 25, 12, 00, 0);
         am.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
                 AlarmManager.INTERVAL_DAY , pi);
 // Create one time   Alarm Start After Each 2 Minutes
-alarmManager.set(AlarmManager.RTC_WAKEUP, myAlarmDate.getTimeInMillis(),_myPendingIntent); 
+alarmManager.set(AlarmManager.RTC_WAKEUP, myAlarmDate.getTimeInMillis(),_myPendingIntent);
 
- 
-    }  
+
+    }
 
 
     /* Permission need
-       <uses-permission android:name="android.permission.VIBRATE" />  
+       <uses-permission android:name="android.permission.VIBRATE" />
 
 
     */
@@ -37,7 +36,7 @@ alarmManager.set(AlarmManager.RTC_WAKEUP, myAlarmDate.getTimeInMillis(),_myPendi
        /* run with os
        //permission
            <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-            
+
             //filters
              <action android:name="android.intent.action.BOOT_COMPLETED" />
                  <action android:name="android.intent.action.ACTION_SHUTDOWN" />
